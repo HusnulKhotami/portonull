@@ -1,11 +1,8 @@
-import React, { useEffect } from 'react';
-import './App.css'; // Global CSS
-
-// Import library AOS untuk animasi scroll
+import React, { useEffect, useState } from 'react';
+import './App.css'; 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-// Import semua komponen
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -15,34 +12,35 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Durasi animasi 1 detik
-      once: true,    // Animasi akan muncul setiap kali di-scroll ulang
-      mirror: true,   // Animasi muncul saat scroll ke atas maupun ke bawah
+      duration: 1000,
+      once: true,
+      mirror: true,
     });
   }, []);
 
+  useEffect(() => {
+    // Menempelkan atribut data-theme ke elemen <html>
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
   return (
     <div className="app-container">
-      <Navbar />
+      <Navbar toggleTheme={toggleTheme} theme={theme} />
       <main>
-        {/* Tambahkan data-aos untuk animasi per section */}
-        <div data-aos="fade-up">
-          <Hero />
-        </div>
-        <div data-aos="fade-up">
-          <About />
-        </div>
-        <div data-aos="fade-up">
-          <Skills />
-        </div>
-        <div data-aos="fade-up">
-          <Projects />
-        </div>
-        <div data-aos="fade-up">
-          <Contact />
-        </div>
+        <div data-aos="fade-up"><Hero /></div>
+        <div data-aos="fade-up"><About /></div>
+        <div data-aos="fade-up"><Skills /></div>
+        <div data-aos="fade-up"><Projects /></div>
+        <div data-aos="fade-up"><Contact /></div>
       </main>
       <Footer />
     </div>
