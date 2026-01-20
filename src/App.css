@@ -1,0 +1,87 @@
+/* Import font dari Google Fonts (opsional) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+:root {
+  --bg-color: #0d1117; /* GitHub Dark Mode BG */
+  --text-color: #c9d1d9; /* Light gray text */
+  --primary-color: #58a6ff; /* Blue accent */
+  --secondary-bg: #161b22; /* Slightly lighter background for cards */
+  --border-color: #30363d; /* Subtle border */
+  --link-hover-color: #8bb7f0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+section {
+  padding: 80px 0; /* Padding vertikal untuk setiap section */
+  margin-bottom: 20px;
+}
+
+.app-container {
+  width: 100vw; /* Menghabiskan seluruh lebar Viewport */
+  margin: 0;
+  padding: 0 5%; /* Memberikan jarak aman 5% di kanan-kiri */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+/* Scrollbar Styling (Opsional, untuk tampilan lebih bersih) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--link-hover-color);
+}

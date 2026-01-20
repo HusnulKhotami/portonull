@@ -1,0 +1,158 @@
+.contact-section {
+  padding: 80px 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-description {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #8b949e;
+  margin-bottom: 60px;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* Sisi form lebih lebar */
+  gap: 40px;
+  align-items: start;
+}
+
+/* BAGIAN KIRI: KARTU INFO */
+.contact-info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-card {
+  background: var(--secondary-bg);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateX(10px);
+  border-color: var(--primary-color);
+}
+
+.info-icon {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  background: rgba(88, 166, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.info-text h3 {
+  font-size: 1.1rem;
+  color: #e6edf3;
+  margin-bottom: 5px;
+}
+
+.info-text p {
+  font-size: 0.9rem;
+  color: #8b949e;
+  margin-bottom: 10px;
+}
+
+.info-text a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* BAGIAN KANAN: FORMULIR */
+.contact-form-container {
+  background: var(--secondary-bg);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #e6edf3;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  padding: 12px 15px;
+  background: #0d1117;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: var(--link-hover-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(88, 166, 255, 0.3);
+}
+
+.send-icon {
+  font-size: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr; /* Tumpuk satu kolom di HP */
+  }
+  
+  .info-card:hover {
+    transform: translateY(-5px);
+  }
+}

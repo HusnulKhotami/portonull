@@ -1,0 +1,72 @@
+.skills-section {
+  text-align: center;
+  width: 100%;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.skills-container {
+  margin-top: 50px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Efek Fade di sisi kiri dan kanan */
+.skills-container::before,
+.skills-container::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 150px;
+  z-index: 2;
+}
+.skills-container::before { left: 0; background: linear-gradient(to right, var(--bg-color), transparent); }
+.skills-container::after { right: 0; background: linear-gradient(to left, var(--bg-color), transparent); }
+
+.skills-track {
+  display: flex;
+  gap: 30px;
+  /* Sesuaikan animasi: 40s bisa dipercepat atau diperlambat */
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.skill-item {
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center; /* Menyejajarkan ikon & teks secara vertikal */
+  gap: 12px; /* Jarak antara ikon dan teks */
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.skill-icon {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem; /* Ukuran ikon */
+}
+
+.skill-item:hover {
+  border-color: var(--primary-color);
+  transform: scale(1.05);
+  cursor: pointer;
+  background-color: #1c2128;
+}
+
+/* Pause saat di-hover */
+.skills-container:hover .skills-track {
+  animation-play-state: paused;
+}

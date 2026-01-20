@@ -1,0 +1,12 @@
+.footer-container {
+  text-align: center;
+  padding: 40px 0;
+  border-top: 1px solid var(--border-color);
+  margin-top: 60px;
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+
+.footer-container p {
+  margin-bottom: 8px;
+}
