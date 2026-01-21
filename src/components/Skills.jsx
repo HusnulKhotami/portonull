@@ -30,14 +30,14 @@ const Skills = () => {
       
       <div className="skills-container">
         <div className="skills-track">
-          {/* Render List Pertama */}
+
           {skills.map((skill, index) => (
             <div key={`skill-1-${index}`} className="skill-item">
               <span className="skill-icon">{skill.icon}</span>
               {skill.name}
             </div>
           ))}
-          {/* Render List Kedua (Duplikasi untuk loop) */}
+ 
           {skills.map((skill, index) => (
             <div key={`skill-2-${index}`} className="skill-item">
               <span className="skill-icon">{skill.icon}</span>

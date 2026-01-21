@@ -1,17 +1,22 @@
 import React from 'react';
 import '../components/styles/Projects.css';
-import { FaExternalLinkAlt, FaGithub, FaReact, FaNodeJs, FaDatabase, FaCode } from 'react-icons/fa';
-import { SiMongodb, SiExpress, SiRedux, SiSocketdotio, SiPostgresql, SiFirebase, SiCssmodules } from 'react-icons/si';
+import { FaExternalLinkAlt, FaGithub, FaPhp, FaHtml5, FaReact, FaLaravel, FaNodeJs, FaDatabase, FaCode } from 'react-icons/fa';
+import { SiMongodb,SiExpress, SiRedux, SiMysql, SiTailwindcss, SiSocketdotio, SiPostgresql, SiFirebase, SiCssmodules } from 'react-icons/si';
 
 const getTechIcon = (tech) => {
   switch (tech.toLowerCase()) {
     case 'react': return <FaReact color="#61DAFB" />;
     case 'node.js': return <FaNodeJs color="#339933" />;
+    case 'laravel': return <FaLaravel color="#f21101" />;
+    case 'php': return <FaPhp color="#777BB4" />;
+    case 'html': return <FaHtml5 color="#E34F26" />;
     case 'express': return <SiExpress color="#ffffff" />;
     case 'mongodb': return <SiMongodb color="#47A248" />;
     case 'redux': return <SiRedux color="#764ABC" />;
     case 'socket.io': return <SiSocketdotio color="#ffffff" />;
+    case 'tailwind' : return <SiTailwindcss color= "#06B6D4"/>;
     case 'postgresql': return <SiPostgresql color="#4169E1" />;
+    case 'mysql': return <SiMysql color="#4479A1" />;
     case 'firebase': return <SiFirebase color="#FFCA28" />;
     case 'css modules': return <SiCssmodules color="#ffffff" />;
     default: return <FaDatabase />;
@@ -59,24 +64,24 @@ const ProjectCard = ({ title, description, technologies, githubLink, liveLink })
 const Projects = () => {
   const projectsData = [
     {
-      title: "E-Commerce Web App",
-      description: "Aplikasi toko online lengkap dengan keranjang belanja, otentikasi pengguna, dan dashboard admin.",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Redux"],
-      githubLink: "https://github.com/rivaldi/ecommerce-app",
+      title: "E-Commerce KantinKu",
+      description: "Sistem kantin online lengkap dengan keranjang belanja, otentikasi pengguna, dan dashboard admin.",
+      technologies: ["Laravel", "Tailwind", "PostgreSQL", "Redux"],
+      githubLink: "https://github.com/HusnulKhotami/PROJEK-AKHIR-WEB-LANJUT-KANTINKU.git",
       liveLink: "https://ecommerce-demo.vercel.app"
     },
     {
-      title: "Realtime Chat App",
-      description: "Aplikasi chat realtime menggunakan WebSockets untuk komunikasi instan antar pengguna.",
-      technologies: ["React", "Socket.io", "Express", "PostgreSQL"],
-      githubLink: "https://github.com/rivaldi/chat-app",
+      title: "E-Commerce SANTAPIN",
+      description: "Sebuah sistem E-Commerce Restaurant, dilengkapi dengan booking tempat dan pemesanan makanan secara online.",
+      technologies: ["PHP", "MySQL", "HTML", "Tailwind"],
+      githubLink: "https://github.com/HusnulKhotami/SISTEM-SANTAPIN.git",
       liveLink: "https://chat-demo.vercel.app"
     },
     {
       title: "Sistem Manajemen Tugas",
-      description: "Alat untuk mengelola tugas harian, prioritas, dan tenggat waktu dengan antarmuka yang intuitif.",
-      technologies: ["React", "Firebase", "CSS Modules"],
-      githubLink: "https://github.com/rivaldi/task-manager",
+      description: "PLANIFY merupakan sistem untuk mengelola tugas harian, prioritas, dan tenggat waktu dengan antarmuka yang intuitif.",
+      technologies: ["PHP", "MySQL", "HTML", "Tailwind"],
+      githubLink: "https://github.com/Carissaokt/UAPWEB-Planify.git",
       liveLink: "https://task-manager-demo.vercel.app"
     },
     {
