@@ -1,7 +1,7 @@
 import React from 'react';
 import '../components/styles/Projects.css';
-import { FaExternalLinkAlt, FaGithub, FaPhp, FaHtml5, FaReact, FaLaravel, FaNodeJs, FaDatabase, FaCode } from 'react-icons/fa';
-import { SiMongodb,SiExpress, SiRedux, SiMysql, SiTailwindcss, SiSocketdotio, SiPostgresql, SiFirebase, SiCssmodules } from 'react-icons/si';
+import { FaExternalLinkAlt, FaGithub, FaRegCreditCard, FaPhp, FaJava, FaHtml5, FaReact, FaLaravel, FaNodeJs, FaDatabase, FaCode } from 'react-icons/fa';
+import { SiMongodb, SiExpress, SiRedux, SiKotlin, SiMysql, SiTailwindcss, SiSocketdotio, SiPostgresql, SiFirebase, SiCssmodules } from 'react-icons/si';
 
 const getTechIcon = (tech) => {
   switch (tech.toLowerCase()) {
@@ -10,6 +10,8 @@ const getTechIcon = (tech) => {
     case 'laravel': return <FaLaravel color="#f21101" />;
     case 'php': return <FaPhp color="#777BB4" />;
     case 'html': return <FaHtml5 color="#E34F26" />;
+    case 'java': return <FaJava color="#007396" />;
+    case 'midtrans': return <FaRegCreditCard color="#002855" />;
     case 'express': return <SiExpress color="#ffffff" />;
     case 'mongodb': return <SiMongodb color="#47A248" />;
     case 'redux': return <SiRedux color="#764ABC" />;
@@ -17,6 +19,7 @@ const getTechIcon = (tech) => {
     case 'tailwind' : return <SiTailwindcss color= "#06B6D4"/>;
     case 'postgresql': return <SiPostgresql color="#4169E1" />;
     case 'mysql': return <SiMysql color="#4479A1" />;
+    case 'kotlin': return <SiKotlin color="#7F52FF" />;
     case 'firebase': return <SiFirebase color="#FFCA28" />;
     case 'css modules': return <SiCssmodules color="#ffffff" />;
     default: return <FaDatabase />;
@@ -65,30 +68,30 @@ const Projects = () => {
   const projectsData = [
     {
       title: "E-Commerce KantinKu",
-      description: "Sistem kantin online lengkap dengan keranjang belanja, otentikasi pengguna, dan dashboard admin.",
-      technologies: ["Laravel", "Tailwind", "PostgreSQL", "Redux"],
+      description: "A complete online cafeteria system with shopping carts, user authentication, and admin dashboard.",
+      technologies: ["Laravel", "Tailwind", "PostgreSQL", "Midtrans"],
       githubLink: "https://github.com/HusnulKhotami/PROJEK-AKHIR-WEB-LANJUT-KANTINKU.git",
       liveLink: "https://ecommerce-demo.vercel.app"
     },
     {
       title: "E-Commerce SANTAPIN",
-      description: "Sebuah sistem E-Commerce Restaurant, dilengkapi dengan booking tempat dan pemesanan makanan secara online.",
+      description: "An E-Commerce Restaurant system, equipped with online table reservations and food ordering.",
       technologies: ["PHP", "MySQL", "HTML", "Tailwind"],
       githubLink: "https://github.com/HusnulKhotami/SISTEM-SANTAPIN.git",
       liveLink: "https://chat-demo.vercel.app"
     },
     {
       title: "Sistem Manajemen Tugas",
-      description: "PLANIFY merupakan sistem untuk mengelola tugas harian, prioritas, dan tenggat waktu dengan antarmuka yang intuitif.",
+      description: "PLANIFY is a system for managing daily tasks, priorities, and deadlines with an intuitive interface.",
       technologies: ["PHP", "MySQL", "HTML", "Tailwind"],
       githubLink: "https://github.com/Carissaokt/UAPWEB-Planify.git",
       liveLink: "https://task-manager-demo.vercel.app"
     },
     {
-      title: "Realtime Chat App",
-      description: "Aplikasi chat realtime menggunakan WebSockets untuk komunikasi instan antar pengguna.",
-      technologies: ["React", "Socket.io", "Express", "PostgreSQL"],
-      githubLink: "https://github.com/rivaldi/chat-app",
+      title: "App FindTop",
+      description: "An Android application designed to help users find laptops that suit their needs automatically and efficiently.",
+      technologies: ["Kotlin"],
+      githubLink: "https://github.com/DANIELMAHENDRA/FinTop.git",
       liveLink: "https://chat-demo.vercel.app"
     },
     {
@@ -96,6 +99,13 @@ const Projects = () => {
       description: "Alat untuk mengelola tugas harian, prioritas, dan tenggat waktu dengan antarmuka yang intuitif.",
       technologies: ["React", "Firebase", "CSS Modules"],
       githubLink: "https://github.com/rivaldi/task-manager",
+      liveLink: "https://task-manager-demo.vercel.app"
+    },
+     {
+      title: "Snake Game",
+      description: "Games designed using the Java programming language that are intuitive and easy to use",
+      technologies: ["Java"],
+      githubLink: "https://github.com/HusnulKhotami/Project-Akhir-PBO-Game-Java-FX.git",
       liveLink: "https://task-manager-demo.vercel.app"
     }
   ];
