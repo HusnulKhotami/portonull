@@ -1,7 +1,7 @@
 import React from 'react';
 import '../components/styles/About.css';
-import { FaGraduationCap, FaCode, FaAward } from 'react-icons/fa';
-import ProfileImg from '../assets/pic1.jpg'; 
+import { FaGraduationCap, FaCode, FaAward, FaTools} from 'react-icons/fa';
+import ProfileImg from '../assets/about.jpeg'; 
 
 const About = () => {
   return (
@@ -19,7 +19,7 @@ const About = () => {
 
           <div className="about-text">
             <p>
-              Hello! I am <span>HusTami Wii</span>, a Computer Science student at Lampung University focusing on web development and artificial intelligence. For me, technology is not just lines of code, but a way to build more responsive systems and make things easier for many people.
+              Hello! I am <span>Husnul Khotami</span>, a Computer Science student at Lampung University focusing on web development and artificial intelligence. For me, technology is not just lines of code, but a way to build more responsive systems and make things easier for many people.
             </p>
             <p>
               With over 2 years of experience in the <strong>Modern JavaScript (React & Node.js)</strong> ecosystem, I am currently actively exploring the world of <strong>Machine Learning</strong>. I believe that the future of the web lies in its ability to “think” and provide more personalized solutions for its users.
@@ -54,10 +54,10 @@ const About = () => {
           </div>
 
           <div className="stat-card">
-            <div className="stat-icon"><FaGraduationCap /></div>
+            <div className="stat-icon"><FaTools /></div>
             <div className="stat-info">
-              <h3>20+</h3>
-              <p>Certificates</p>
+              <h3>10+</h3>
+              <p>Tools & Tech</p>
             </div>
           </div>
         </div>

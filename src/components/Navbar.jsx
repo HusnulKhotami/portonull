@@ -11,7 +11,7 @@ const Navbar = ({ toggleTheme, theme }) => {
   return (
     <nav className="navbar-container">
       <div className="navbar-logo">
-        <a href="#home">S.Komedi<span>Dev</span></a>
+        <a href="#home">Portof'<span>Null</span></a>
       </div>
 
       {/* Container untuk menu dan toggle */}

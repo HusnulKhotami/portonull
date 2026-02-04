@@ -4,7 +4,7 @@ import profileImg from '../assets/profile.jpg';
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState('');
-  const fullText = "HusTami Wii.";
+  const fullText = "Husnul Khotami";
   const typingSpeed = 150;
 
   useEffect(() => {
