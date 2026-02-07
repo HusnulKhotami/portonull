@@ -25,10 +25,7 @@ const Navbar = ({ toggleTheme, theme }) => {
         </ul>
 
         <div className="nav-right">
-          {/* LOGIKA DIPERBAIKI: 
-              Jika theme === 'dark', tampilkan Bulan. 
-              Jika theme === 'light', tampilkan Matahari. 
-          */}
+          
           <div className="theme-switcher" onClick={toggleTheme}>
             {theme === 'dark' ? (
               <FaMoon style={{ color: '#c9d1d9' }} /> 
